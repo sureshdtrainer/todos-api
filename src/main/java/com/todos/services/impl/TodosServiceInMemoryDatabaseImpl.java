@@ -12,7 +12,7 @@ import com.todos.exceptions.ResourceNotFoundException;
 import com.todos.models.Todo;
 import com.todos.services.TodosService;
 
-@Service
+//@Service
 public class TodosServiceInMemoryDatabaseImpl implements TodosService {
 	
 	Logger logger = LoggerFactory.getLogger(TodosServiceInMemoryDatabaseImpl.class);
