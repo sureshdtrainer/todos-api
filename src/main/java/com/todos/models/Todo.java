@@ -2,9 +2,21 @@ package com.todos.models;
 
 import java.util.Date;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="todos")
 public class Todo {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	@Column(name="username", nullable=false)
 	private String user;
 	private String description;
 	private Date targetDate;
