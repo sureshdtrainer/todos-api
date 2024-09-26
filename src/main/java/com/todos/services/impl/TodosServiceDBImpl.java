@@ -31,14 +31,15 @@ public class TodosServiceDBImpl implements TodosService {
 		return todosRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("todos", "id", id));
 	}
 
-	@Override
-	public List<Todo> getTodosByUser(String user) {
-		return todosRepository.findByUser(user);
-	}
+	
 
 	@Override
 	public Todo saveTodo(Todo todo) {
 		return todosRepository.save(todo);
+	}
+	@Override
+	public List<Todo> getTodosByUser(String user) {
+		return todosRepository.findByUser(user);
 	}
 
 	@Override
